@@ -1,0 +1,218 @@
+openapi: 3.0.0
+info:
+  title: Food and Profile API
+  version: 1.0.0
+paths:
+  /auth/send-code:
+    post:
+      summary: Send verification code
+      operationId: sendVerificationCode
+      responses:
+        '200':
+          description: Code sent
+
+  /auth/verify-code:
+    post:
+      summary: Verify code
+      operationId: verifyCode
+      responses:
+        '200':
+          description: Code verified
+
+  /foods/find-nearby:
+    get:
+      summary: Find foods nearby
+      operationId: findFoodsNearby
+      responses:
+        '200':
+          description: Nearby foods retrieved
+
+  /foods/category/{category}:
+    get:
+      summary: Get foods by category
+      parameters:
+        - name: category
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Foods by category retrieved
+
+  /foods/restaurant/{restaurantId}:
+    get:
+      summary: Get foods by restaurant
+      parameters:
+        - name: restaurantId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Foods by restaurant retrieved
+
+  /foods/compare:
+    get:
+      summary: Compare foods
+      operationId: compareFoods
+      responses:
+        '200':
+          description: Foods compared
+
+  /foods/{id}:
+    get:
+      summary: Get food by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Food item retrieved
+
+    put:
+      summary: Update food by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Food item updated
+
+    delete:
+      summary: Delete food by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Food item deleted
+
+  /foods/{foodId}/restaurants:
+    get:
+      summary: Get restaurants offering a specific food
+      parameters:
+        - name: foodId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Restaurants offering the food retrieved
+
+  /foods:
+    post:
+      summary: Create a new food item
+      responses:
+        '201':
+          description: Food item created
+
+    get:
+      summary: Get all foods with pagination
+      responses:
+        '200':
+          description: Foods retrieved with pagination
+
+  /profile:
+    get:
+      summary: Get user profile
+      responses:
+        '200':
+          description: Profile retrieved
+
+    put:
+      summary: Update user profile
+      responses:
+        '200':
+          description: Profile updated
+
+  /profile/eaten:
+    get:
+      summary: Get profile eaten foods
+      responses:
+        '200':
+          description: Eaten foods retrieved
+
+  /profile/food:
+    post:
+      summary: Add restaurant food to profile
+      responses:
+        '201':
+          description: Food added to profile
+
+  /profile/review:
+    post:
+      summary: Write a review
+      responses:
+        '201':
+          description: Review submitted
+
+  /profile/notifications:
+    get:
+      summary: Get all notifications
+      responses:
+        '200':
+          description: Notifications retrieved
+
+    put:
+      summary: Mark all notifications as read
+      responses:
+        '200':
+          description: All notifications marked as read
+
+  /profile/notifications/{notificationId}/read:
+    put:
+      summary: Mark specific notification as read
+      parameters:
+        - name: notificationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Notification marked as read
+
+  /profile/ai-food:
+    post:
+      summary: Add AI food to profile
+      responses:
+        '201':
+          description: AI food added to profile
+
+  /profile/eaten/{eatenFoodId}:
+    delete:
+      summary: Delete eaten food from profile
+      parameters:
+        - name: eatenFoodId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Eaten food deleted
+
+  /profile/water-intake:
+    post:
+      summary: Add water intake
+      responses:
+        '201':
+          description: Water intake added
+
+    get:
+      summary: Get water intake
+      responses:
+        '200':
+          description: Water intake retrieved

@@ -1,0 +1,63 @@
+{
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/server.ts --bundle --outfile=api/index.js --platform=node --format=esm --packages=external",
+    "start-4": "node api/index.js",
+    "start": " node api/index.js",
+    "dev-concurrent": "run-p -sl dev:*",
+    "dev": "tsx watch src/server.ts",
+    "type-check": "tsc",
+    "dev:tsc": "tsc --watch --preserveWatchOutput",
+    "dev:node": "node --watch build/server.js",
+    "dev:esbuild": "pnpm run build --watch",
+    "db:seed": "tsx src/scripts/seeder.ts",
+    "custom:script": "tsx src/scripts/create-mongo-db-collection-from-json-file.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^0.0.66",
+    "@aws-sdk/client-s3": "^3.701.0",
+    "ai": "^3.4.9",
+    "aws-sdk": "^2.1691.0",
+    "big.js": "^6.2.1",
+    "cli-progress": "^3.12.0",
+    "compression": "^1.8.1",
+    "consola": "^3.2.3",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.1.5",
+    "formidable": "^3.5.2",
+    "google-auth-library": "^9.14.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.4",
+    "multer": "^1.4.5-lts.1",
+    "otplib": "^12.0.1",
+    "p-limit": "^6.1.0",
+    "redoc-express": "^2.1.0",
+    "request-ip": "^3.3.0",
+    "twilio": "^5.2.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/big.js": "^6.2.2",
+    "@types/cli-progress": "^3.11.6",
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/formidable": "^3.4.5",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^20.19.10",
+    "@types/request-ip": "^0.0.41",
+    "esbuild": "^0.20.0",
+    "npm-run-all": "^4.1.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
