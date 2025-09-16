@@ -1,0 +1,15 @@
+export const Routes = {
+  Home: "/",
+  Landing: "/landing",
+  Chat: "/ai",
+  Profile: "/profile",
+  Restaurants: "/restaurants",
+  Meals: "/meals",
+  Compare: "/compare",
+  UserSettings: "/user-settings",
+  Login: "/login",
+  CheckOTP: "/check-otp",
+  Comments: "/comments",
+  Privacy: "/privacy-policy",
+  AiSearch: "/ai/search",
+};

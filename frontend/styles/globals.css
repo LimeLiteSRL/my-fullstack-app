@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Make fonts lighter for landing and products pages */
+body {
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500 !important;
+}
+
+.font-bold {
+  font-weight: 600 !important;
+}
+
+.font-semibold {
+  font-weight: 500 !important;
+}
+
+.font-medium {
+  font-weight: 400 !important;
+}
+
+/* Specific adjustments for landing and products pages */
+[class*="text-"] {
+  font-weight: inherit;
+}
+
+/* Full width override for landing and app pages */
+body.full-width {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main.full-width {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force full width for specific routes */
+body[data-route="/"],
+body[data-route="/app"] {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main[data-route="/"],
+main[data-route="/app"] {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Set all buttons to have 24px border radius */
+button, .btn, [role="button"] {
+  border-radius: 24px !important;
+}
+
+/* Override Tailwind button classes */
+.rounded-full {
+  border-radius: 24px !important;
+}
+
+.rounded-lg {
+  border-radius: 24px !important;
+}
+
+.rounded-xl {
+  border-radius: 24px !important;
+}
+
+.rounded-2xl {
+  border-radius: 24px !important;
+}
+
+.rounded-3xl {
+  border-radius: 24px !important;
+}
+
+.rounded-r-full {
+  border-radius: 0 24px 24px 0 !important;
+}
+
+.rounded-l-full {
+  border-radius: 24px 0 0 24px !important;
+}
+
+/* Input fields border radius */
+input, textarea {
+  border-radius: 24px !important;
+}
+
+/* Override specific input radius classes */
+input.rounded-l-full {
+  border-radius: 24px 0 0 24px !important;
+}
+
+input.rounded-r-full {
+  border-radius: 0 24px 24px 0 !important;
+}
+
+input.rounded-full {
+  border-radius: 24px !important;
+}
+
+/* Compare buttons styling */
+button:contains("Compare"), [role="button"]:contains("Compare") {
+  color: #6366F1 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+button:contains("Compare"):hover, [role="button"]:contains("Compare"):hover {
+  background: #f9fafb !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html body[data-scroll-locked] {
+  margin-right: auto !important;
+}
+
+.cky-consent-container {
+}
+
+.cky-btn-revisit-wrapper {
+}
