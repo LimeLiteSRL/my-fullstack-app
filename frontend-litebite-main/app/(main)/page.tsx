@@ -463,7 +463,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-base sm:text-xl md:text-2xl lg:text-2xl mb-8 lg:mb-8 opacity-90 max-w-4xl mx-auto font-light">
-              Find meals that match your diet, calories, and allergies—no compromises.
+            Discover restaurant meals that fit your calories and diet with AI, making it easier to reach your health goals
             </p>
             
             {/* Search Bar - always visible */}
@@ -991,7 +991,7 @@ const AboutSection = () => {
 
             {/* 75% highlight on top for mobile */}
             <div className="bg-white/20 rounded-2xl p-4 text-center backdrop-blur-sm mb-6">
-              <div className="text-3xl font-bold text-[#CEFF65] mb-1">75%</div>
+              <div className="text-3xl font-bold text-[#CEFF65] mb-1">100%</div>
               <p className="text-xs text-white/90">Of users make healthier choices</p>
             </div>
 
@@ -1033,7 +1033,7 @@ const AboutSection = () => {
                 </p>
                 
                 <div className="mt-8 bg-white/20 rounded-2xl p-4 md:p-5 lg:p-6 text-center backdrop-blur-sm inline-block">
-                  <div className="text-3xl md:text-3xl lg:text-4xl font-bold text-[#CEFF65] mb-2">75%</div>
+                  <div className="text-3xl md:text-3xl lg:text-4xl font-bold text-[#CEFF65] mb-2">100%</div>
                   <p className="text-sm text-white/90">Of users make healthier choices</p>
                 </div>
               </div>

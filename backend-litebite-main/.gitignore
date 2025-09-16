@@ -1,0 +1,9 @@
+build
+node_modules
+.env
+
+temp
+.vercel
+api
+
+.DS_Store
